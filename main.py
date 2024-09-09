@@ -9,6 +9,7 @@ origins = [
     "http://localhost",  # Origen local
     "http://localhost:5173",  # Si tu frontend corre en este puerto
     "http://192.168.100.5:5173",
+    "https://cncwebpage.netlify.app/"
  # Tu dominio de producción
 ]
 
