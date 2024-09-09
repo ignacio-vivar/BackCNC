@@ -21,6 +21,11 @@ app.add_middleware(
     allow_headers=["*"],  # Permitir todos los encabezados
 )
 
+@app.get("/")
+def default():
+    return {
+        "mensaje" : "actualizado 8/9"
+    }
 # Trabajos Prácticos
 @app.get("/tps")
 def tps_list():
