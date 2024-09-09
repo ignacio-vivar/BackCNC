@@ -6,8 +6,8 @@ from api.youtube_service import get_videos_from_playlist
 app = FastAPI()
 
 origins = [
-    "https://cncwebpage.netlify.app/",
-    "https://main--cncwebpage.netlify.app/"
+    "https://cncwebpage.netlify.app",
+    "https://main--cncwebpage.netlify.app"
  # Tu dominio de producción
 ]
 
@@ -22,7 +22,7 @@ app.add_middleware(
 @app.get("/")
 def default():
     return {
-        "mensaje" : "actualizado 8/9"
+        "mensaje" : "actualizado 8/9 22:15"
     }
 # Trabajos Prácticos
 @app.get("/tps")
