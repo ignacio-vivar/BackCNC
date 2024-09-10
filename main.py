@@ -7,6 +7,7 @@ app = FastAPI()
 
 origins = [
     # "http://localhost:5173",
+    # "http://192.168.100.5:5173",
     "https://cncwebpage.netlify.app",
     "https://main--cncwebpage.netlify.app"
  # Tu dominio de producción
