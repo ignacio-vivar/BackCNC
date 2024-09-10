@@ -6,6 +6,7 @@ from api.youtube_service import get_videos_from_playlist
 app = FastAPI()
 
 origins = [
+    # "http://localhost:5173",
     "https://cncwebpage.netlify.app",
     "https://main--cncwebpage.netlify.app"
  # Tu dominio de producción
@@ -64,6 +65,8 @@ def manuales():
         "manuales" : [
             {"id": 0, "file":"manualFull.pdf", "title":"Manual CNC Completo", "thumbnail" : "full.jpg", "alt":"Imagen Libro"},
             {"id": 1, "file":"manualResumido.pdf", "title":"Manual CNC Resumido", "thumbnail" : "resum.jpg", "alt":"Imagen Libro Resumen"},
+            {"id": 2, "file":"TeoriaTP1.pdf", "title":"Teoria Trabajo Práctico N°1", "thumbnail" : "teoriaTPS.jpg", "alt":"Imagen Teoría TPS"},
+            {"id": 3, "file":"TeoriaTP2.pdf", "title":"Teoría Trabajo Práctico N°2", "thumbnail" : "teoriaTPS.jpg", "alt":"Imagen Teoría TPS"},
         ]
     }
 
