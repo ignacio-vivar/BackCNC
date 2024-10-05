@@ -116,16 +116,94 @@ def files(filename: str):
 
 # Obtención de videos
 
+# @app.get("/playlist/")
+# async def get_playlist_videos(playlist_url: str):
+#     try:
+#         # Llama a la función del módulo youtube_service para obtener los videos
+#         videos = get_videos_from_playlist(playlist_url)
+#         return {"videos": videos}
+#     except ValueError as e:
+#         raise HTTPException(status_code=400, detail=str(e))
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail="Error inesperado en el servidor")
+
 @app.get("/playlist/")
-async def get_playlist_videos(playlist_url: str):
-    try:
-        # Llama a la función del módulo youtube_service para obtener los videos
-        videos = get_videos_from_playlist(playlist_url)
-        return {"videos": videos}
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error inesperado en el servidor")
+def get_videos_static():
+    return{
+        
+    "videos": [
+        {
+            "title": "01 Introducci\u00f3n",
+            "video_url": "https://youtube.com/watch?v=bP4OYWBRlOQ",
+            "thumbnail_url": "https://i.ytimg.com/vi/bP4OYWBRlOQ/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGkgEyh_MA8=&rs=AOn4CLChbPUg0wf9oO3jXjvLANzKKP0qkQ"
+        },
+        {
+            "title": "02 ProgramaInicio",
+            "video_url": "https://youtube.com/watch?v=r2jd293ELPs",
+            "thumbnail_url": "https://i.ytimg.com/vi/r2jd293ELPs/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGkgEyh_MA8=&rs=AOn4CLA1aDUlmMQdFI6dLfSS_kbLHplVOA"
+        },
+        {
+            "title": "03 ReferenciarBasico",
+            "video_url": "https://youtube.com/watch?v=r3Y9a6egLn0",
+            "thumbnail_url": "https://i.ytimg.com/vi/r3Y9a6egLn0/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLAQpMbzDKKbpXOAxwt1c7VMmN2MLw"
+        },
+        {
+            "title": "04 SeleccionPieza",
+            "video_url": "https://youtube.com/watch?v=zwZHcxDSjFY",
+            "thumbnail_url": "https://i.ytimg.com/vi/zwZHcxDSjFY/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLDBpoH_9zVBe69qj0OzVcsMEFzFqA"
+        },
+        {
+            "title": "05 SelectInsertos",
+            "video_url": "https://youtube.com/watch?v=gaEGPBMQujs",
+            "thumbnail_url": "https://i.ytimg.com/vi/gaEGPBMQujs/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTih_MA8=&rs=AOn4CLDw3R6CrlfDsmyVfMmJ6Yiw15gsqw"
+        },
+        {
+            "title": "06 PosicionamientoRapido",
+            "video_url": "https://youtube.com/watch?v=Vp2E_KWUK5o",
+            "thumbnail_url": "https://i.ytimg.com/vi/Vp2E_KWUK5o/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTih_MA8=&rs=AOn4CLDGaUNwM2AZ9Y0-UoM1Y_4vPFqrAA"
+        },
+        {
+            "title": "07 MeasureWorkPiece",
+            "video_url": "https://youtube.com/watch?v=muAbsBkwZ0Q",
+            "thumbnail_url": "https://i.ytimg.com/vi/muAbsBkwZ0Q/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTih_MA8=&rs=AOn4CLCCk1m1zIukZPmqcpmeDtDC1qQsuQ"
+        },
+        {
+            "title": "08 OffsetParam",
+            "video_url": "https://youtube.com/watch?v=EASqCwGE9LY",
+            "thumbnail_url": "https://i.ytimg.com/vi/EASqCwGE9LY/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLAIkB2mH9TC2a_FW8yhRHcjURjNEg"
+        },
+        {
+            "title": "09 ToolMeasure",
+            "video_url": "https://youtube.com/watch?v=ExCiiToHbyc",
+            "thumbnail_url": "https://i.ytimg.com/vi/ExCiiToHbyc/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTih_MA8=&rs=AOn4CLBBnYKTgv0M5bcUIOhR-ME2_E5alg"
+        },
+        {
+            "title": "10 Programas",
+            "video_url": "https://youtube.com/watch?v=VUMJssSJ8VI",
+            "thumbnail_url": "https://i.ytimg.com/vi/VUMJssSJ8VI/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTih_MA8=&rs=AOn4CLCsTofTzP-hnxde3ipHGNg6gkHqRQ"
+        },
+        {
+            "title": "11 DondeEstaMiCodigo",
+            "video_url": "https://youtube.com/watch?v=ni0-aw4kM1U",
+            "thumbnail_url": "https://i.ytimg.com/vi/ni0-aw4kM1U/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGGkgEyh_MA8=&rs=AOn4CLA3ivvGjDDRTC6uIUiQELaAZ77T9A"
+        },
+        {
+            "title": "12 EjecutarPrograma",
+            "video_url": "https://youtube.com/watch?v=OokvaGIzrLI",
+            "thumbnail_url": "https://i.ytimg.com/vi/OokvaGIzrLI/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLBDFA7Z3LiKyVDwuh41n8V99akOaw"
+        },
+        {
+            "title": "13 Colisiones",
+            "video_url": "https://youtube.com/watch?v=C637qWpy1AI",
+            "thumbnail_url": "https://i.ytimg.com/vi/C637qWpy1AI/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLBzZk3u_KpDHXjBf8d4k3cfSsePiw"
+        },
+        {
+            "title": "14 Generalidades",
+            "video_url": "https://youtube.com/watch?v=d3c63NDF13g",
+            "thumbnail_url": "https://i.ytimg.com/vi/d3c63NDF13g/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACzgWKAgwIABABGBMgTSh_MA8=&rs=AOn4CLCd3LHcq5h02l69yuEY8FXFlDcjFQ"
+        }
+    ]
+}
     
 
 # Lista de programas
