@@ -37,6 +37,7 @@ def tps_list():
             {"id" : 3, "file" : "TP3.pdf", "name" : "Trabajo Práctico N°3"},
             {"id" : 4, "file" : "TP4.pdf", "name" : "Trabajo Práctico N°4"},
             {"id" : 5, "file" : "TP5.pdf", "name" : "Trabajo Práctico N°5"},
+            {"id" : 6, "file" : "TP6.pdf", "name" : "Trabajo Práctico N°6"},
                 ]
         }
 
