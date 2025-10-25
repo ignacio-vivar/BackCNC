@@ -98,10 +98,12 @@ def files(filename: str):
 def manuales():
     return {
         "sscnc": [
-            {"id": 0, "file":"Guia1.pdf","title": "Guia 1" , "desc":"Básicos del Simulador"},
-            {"id": 1, "file":"Guia2.pdf","title": "Guia 2" , "desc":"Referencias del Simulador (1/2)"},
-            {"id": 2, "file":"Guia3.pdf","title": "Guia 3" , "desc":"Referencias del Simulador (2/2)"},
-            {"id": 3, "file":"Guia4.pdf","title": "Guia 4" , "desc":"Programas en el Simulador"},
+            {"id": 0, "file":"Guia-SSCNC-1.pdf","title": "Guia 1" , "desc":"Elementos-Basicos"},
+            {"id": 1, "file":"Guia-SSCNC-2.pdf","title": "Guia 2" , "desc":"Creación del Programa"},
+            {"id": 2, "file":"Guia-SSCNC-3.pdf","title": "Guia 3" , "desc":"Referencias (1/2)"},
+            {"id": 3, "file":"Guia-SSCNC-4.pdf","title": "Guia 4" , "desc":"Referencias (2/2)"},
+            {"id": 3, "file":"Guia-SSCNC-5.pdf","title": "Guia 5" , "desc":"Ejecución del Programa"},
+            {"id": 3, "file":"Guia-SSCNC-Anexo.pdf","title": "Anexo" , "desc":"Programas en el Simulador"},
         ]
     }
 
